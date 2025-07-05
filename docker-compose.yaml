@@ -1,0 +1,53 @@
+version: "3"
+services:
+  proxy:
+    restart: always
+    image: envoyproxy/envoy
+    ports:
+      - "8081:8080"
+    volumes: 
+      - ./proxy/certs:/etc/envoy/certs
+      - ./proxy/envoy.yaml:/etc/envoy/envoy.yaml
+    depends_on:
+      - bimplatform
+  bimplatform:
+    restart: always
+    build: .
+    volumes:
+      - ./logs:/usr/local/lib/logs
+    environment:
+      - "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}"
+      - "MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}"
+      - "MINIO_SECRET_KEY=${MINIO_SECRET_KEY}"
+      - "MINIO_EXTERNAL_ENDPOINT=${MINIO_EXTERNAL_ENDPOINT}"
+    depends_on:
+      - mysql
+      - minio
+  mysql:
+    restart: always
+    image: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      TZ: ${MYSQL_TZ}
+      MYSQL_DATABASE: bim
+  minio:
+    restart: always
+    image: minio/minio
+    volumes:
+      - ./data/minio:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
+    command: server --console-address :9001 /data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3

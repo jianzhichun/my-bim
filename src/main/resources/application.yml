@@ -1,0 +1,98 @@
+spring:
+  thymeleaf:
+    prefix: classpath:/static/
+    cache: false
+  session:
+    store-type: jdbc
+  jpa:
+    properties:
+      javax.persistence.validation.mode: none
+    hibernate.ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  datasource.druid:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql:3306/bim?serverTimezone=Asia/Shanghai
+    username: root
+    password: ${MYSQL_ROOT_PASSWORD}
+    initial-size: 5
+    max-active: 100
+    min-idle: 5
+    max-wait: 60000
+    pool-prepared-statements: true
+    max-pool-prepared-statement-per-connection-size: 20
+    validation-query: SELECT 1 FROM DUAL
+    validation-query-timeout: 60000
+    test-on-borrow: false
+    test-on-return: false
+    test-while-idle: true
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 100000
+    web-stat-filter:
+      enabled: true
+      url-pattern: /*
+      exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+    stat-view-servlet:
+      enabled: true
+      url-pattern: /druid/*
+      reset-enable: false
+      login-username: admin
+      login-password: admin
+      allow: '*'
+    filter:
+      stat:
+        db-type: mysql
+        log-slow-sql: true
+        slow-sql-millis: 5000
+      wall:
+        enabled: true
+        db-type: mysql
+        config:
+          multi-statement-allow: true
+          delete-allow: true
+          drop-table-allow: true
+          none-base-statement-allow: true
+
+  jackson.default-property-inclusion: non_null
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%X{TRACE_ID}){red} %clr(%5p) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS}|%X{TRACE_ID}|%p|${PID:- }|%t|%logger{39}|%replace(%m){'\n','\\n'}%replace(%ex){'\n','\\n'}%nopex%n"
+    rolling-file-name: "${LOG_FILE}.%d{yyyy-MM-dd}.%i.gz"
+  file:
+    max-history: 7
+    max-size: 10MB
+
+s3:
+  endpoint: http://minio:9000
+  external-endpoint: ${MINIO_EXTERNAL_ENDPOINT}
+  expired-seconds: 3600
+  accessKeyId: ${MINIO_ACCESS_KEY}
+  accessKeySecret: ${MINIO_SECRET_KEY}
+  bucketName: bim
+
+jwt:
+  tokenHeader: Authorization
+  tokenPrefix: Bearer
+  secret: lanjwt
+  expiration: 3600
+  rememberExpiration: 604800
+
+swagger:
+  enabled: false
+  base-package: com.zjjqtech.bimplatform
+
+---
+spring.profiles: debug
+swagger.enabled: true
+logging.level:
+  com.zjjqtech.bimplatform.controller.utils.BimControllerAdvice: debug
+  org.hibernate.engine.QueryParameters: debug
+  org.hibernate.engine.query.HQLQueryPlan: debug
+  org.hibernate.type.descriptor.sql.BasicBinder: trace
+
+---
+spring.profiles: prod
+logging.file.name: ./logs/application.log

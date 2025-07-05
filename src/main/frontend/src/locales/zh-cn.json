@@ -1,0 +1,133 @@
+{
+  "title": "集泉科技BIM平台",
+  "login": {
+    "username": {
+      "value": "用户名/邮箱/电话号码",
+      "required": "请输入用户名/邮箱/电话号码!"
+    },
+    "password": {
+      "value": "密码",
+      "required": "请输入密码!"
+    },
+    "remember": "下次自动登录",
+    "login": "登录",
+    "forgotPassword": "忘记密码",
+    "register": "注册新用户",
+    "or": "或者",
+    "success": "成功"
+  },
+  "register": {
+    "success": "成功",
+    "username": {
+      "value": "用户名",
+      "tooltip": "用户名",
+      "required": "请输入用户名"
+    },
+    "email": {
+      "value": "邮箱",
+      "required": "请输入邮箱",
+      "valid": "非法邮箱格式"
+    },
+    "phone": {
+      "value": "电话号码",
+      "required": "请输入电话号码"
+    },
+    "password": {
+      "value": "密码",
+      "required": "请输入密码"
+    },
+    "confirmedPassword": {
+      "value": "确认密码",
+      "required": "请输入确认密码",
+      "valid": "两次输入的密码不相同"
+    },
+    "register": "注册"
+  },
+  "forgotPassword": {
+    "username": {
+      "value": "用户名/邮箱/电话号码",
+      "required": "请输入用户名/邮箱/电话号码!"
+    },
+    "apply": "重置密码",
+    "success": "发送成功,请检查您的邮箱.",
+    "tooltip": "发送重置密码链接到您的邮箱."
+  },
+  "resetPassword": {
+    "username": {
+      "value": "用户名/邮箱/电话",
+      "required": "请输入用户名/邮箱/电话号码!"
+    },
+    "oldPassword": {
+      "value": "旧密码",
+      "required": "请输入旧密码!"
+    },
+    "password": {
+      "value": "密码",
+      "required": "请输入密码"
+    },
+    "confirmedPassword": {
+      "value": "确认密码",
+      "required": "请输入确认密码",
+      "valid": "两次输入的密码不相同"
+    },
+    "reset": "重置密码",
+    "success": "成功"
+  },
+  "footer": "BIM 平台 ©2020 浙江集泉建筑科技",
+  "logout": "退出",
+  "anonymous": "匿名",
+  "loading": "加载中...",
+  "project": {
+    "description": "描述信息",
+    "createdOn": "创建时间",
+    "updatedOn": "修改时间",
+    "owner": "管理员",
+    "delete": {
+      "confirm": "确认删除?",
+      "success": "删除成功",
+      "value": "删除"
+    },
+    "newName": "新建项目",
+    "mine": "我的项目",
+    "all": "全部项目",
+    "search": {
+      "nameLike": {
+        "placeholder": "按项目名搜索."
+      },
+      "tag": {
+        "placeholder": "按项目标签搜索."
+      }
+    },
+    "edit": {
+      "tag": {
+        "placeholder": "你可以输入标签."
+      },
+      "owner": {
+        "placeholder": "你可以输入管理员."
+      }
+    },
+    "share": {
+      "value": "分享",
+      "refresh": "重新生成分享链接.",
+      "link": "分享链接",
+      "qrcode": "分享二维码"
+    },
+    "model": {
+      "screenshot": "截屏",
+      "screenshotTitle": "单击放大",
+      "screenshotOkText": "设置为封面",
+      "setCoverSuccess": "设置成功",
+      "nameLike": {
+        "placeholder": "按模型名搜索"
+      },
+      "rename": "重命名",
+      "setMainModel": "设置为主模型",
+      "close": "关闭",
+      "name": "模型名",
+      "upload": "上传模型.",
+      "uploadText": "上传svf模型文件夹",
+      "uploadHint": "上传完成前请勿关闭对话框",
+      "value": "模型"
+    }
+  }
+}

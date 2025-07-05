@@ -1,0 +1,133 @@
+{
+  "title": "JI QUAN Tech Bim Platform",
+  "login": {
+    "username": {
+      "value": "Username/Email/Phone",
+      "required": "Please input your username!"
+    },
+    "password": {
+      "value": "Password",
+      "required": "Please input your password!"
+    },
+    "remember": "Remember me",
+    "login": "Log in",
+    "forgotPassword": "Forgot password",
+    "register": "register now!",
+    "or": "Or",
+    "success": "Success"
+  },
+  "register": {
+    "success": "Success",
+    "username": {
+      "value": "Username",
+      "tooltip": "What do you want others to call you?",
+      "required": "Please input your username!"
+    },
+    "email": {
+      "value": "E-mail",
+      "required": "Please input your email!",
+      "valid": "The input is not valid E-mail!"
+    },
+    "phone": {
+      "value": "Phone Number",
+      "required": "Please input your phone number!"
+    },
+    "password": {
+      "value": "Password",
+      "required": "Please input your password!"
+    },
+    "confirmedPassword": {
+      "value": "Confirm Password",
+      "required": "Please confirm your password!",
+      "valid": "The two passwords that you entered do not match!"
+    },
+    "register": "Register"
+  },
+  "forgotPassword": {
+    "username": {
+      "value": "Username/Email/Phone",
+      "required": "Please input your username!"
+    },
+    "apply": "Reset Password",
+    "success": "Success, please check your email.",
+    "tooltip": "Sent reset password link to your email."
+  },
+  "resetPassword": {
+    "username": {
+      "value": "Username",
+      "required": "Please input your username!"
+    },
+    "oldPassword": {
+      "value": "Old Password",
+      "required": "Please input your password!"
+    },
+    "password": {
+      "value": "Password",
+      "required": "Please input your password!"
+    },
+    "confirmedPassword": {
+      "value": "Confirm Password",
+      "required": "Please confirm your password!",
+      "valid": "The two passwords that you entered do not match!"
+    },
+    "reset": "Reset Password",
+    "success": "Success"
+  },
+  "footer": "BIM platform ©2020 Created by Zhejiang Jiquan Tech",
+  "logout": "Logout",
+  "anonymous": "Anony",
+  "loading": "Loading...",
+  "project": {
+    "description": "Description",
+    "createdOn": "Create on",
+    "updatedOn": "Updated on",
+    "owner": "Owners",
+    "delete": {
+      "confirm": "Confirm Delete?",
+      "success": "Delete success",
+      "value": "delete"
+    },
+    "newName": "New Project",
+    "mine": "My Projects",
+    "all": "Projects",
+    "search": {
+      "nameLike": {
+        "placeholder": "Input search text for project name."
+      },
+      "tag": {
+        "placeholder": "Input search tag for project tags."
+      }
+    },
+    "share": {
+      "value": "Share",
+      "refresh": "Re-generate Share Token.",
+      "link": "Share Link",
+      "qrcode": "Share QR Code"
+    },
+    "model": {
+      "screenshot": "ScreenShot",
+      "screenshotTitle": "Click to zoom out.",
+      "screenshotOkText": "Set Cover",
+      "setCoverSuccess": "success",
+      "nameLike": {
+        "placeholder": "Input search text for model name."
+      },
+      "rename": "Rename",
+      "setMainModel": "Set Main Model",
+      "close": "close",
+      "name": "Model Name",
+      "upload": "Upload model.",
+      "uploadText": "Upload svf directory",
+      "uploadHint": "Please do not close the dialog until upload finished.",
+      "value": "Model"
+    },
+    "edit": {
+      "tag": {
+        "placeholder": "You can input tags."
+      },
+      "owner": {
+        "placeholder": "You can input owners."
+      }
+    }
+  }
+}

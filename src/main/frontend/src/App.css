@@ -1,0 +1,108 @@
+@import '~antd/dist/antd.css';
+
+@font-face {
+    font-family: "iconfont";
+    src: url('//at.alicdn.com/t/font_1251483_n6d5wm0u6a.eot?t=1601828722669'); /* IE9 */
+    src: url('//at.alicdn.com/t/font_1251483_n6d5wm0u6a.eot?t=1601828722669#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAUcAAsAAAAAChQAAATNAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDQAqHEIVcATYCJAMYCw4ABCAFhG0HVRuHCMguMRUZ6a6aXVwAp6fxmpm2ViWcb+cHFsHTfv+bc3c/ZlrFJKlphoonaFRLYlLJD55/7t19f6xFo4n5BO+kiYV9LM84xn7M+3oDOSNgARSvmc5HummW0knwbX1b+/hre3fpEmbJrIl1QlUPmahJrDGSWmZEEnRGZTSSV/iFsF1w+Q24b/j/+HtV8362JRacZ9/iMveyMTGCBRpj8LJ4QVpA7DB2cRmvE1DJIIvDkJaufcGdRjsvIJbrVAL3mIVWwgyW3si5NVdxGmWs4k0/Bqfcv4+/zFEBCnpCe9OEhc0q1P1o8eOVdhOmpwPY3Z8LzF1I0AXIiPW5npWc/EwXThwp5ewC5JRFofTVavgx+vEqHUjRK1akcnTkpZHJ1P7zqIhyaJoqkDwmW4YfchMn44ceJ/DDgFPgx0hSV/uCFgkbyvXY2wREAbEUktuoKukPqjTSJofviOs4ommsqly9qod6yTZPr1llIXKoZv1gqsz5bLY6r1j2O6h+bI5c+TvPz6KsHOr351OOPPc+63n9meveC++BDeK91fs3zybG/umHnqrvPve9mLo2d2PUC9/THucPSfoe3CjaU7Vv03xqGuDDm2fOszb89M1BHrW27V2okXYfRrF7pR65a4FW3nOESstWN14e6ThH4WtPCPsNWLt73hH0dbw82cfInKat2RI6f/a8+OpzePbpevOOtwk1MxxPOixbc0Wi1iGifO4L5Q9LLFjTFVNtzcbpWIirpwnUVdUfTUfms1o1bVX1iJvVu9qQecH5PXoctiNBtesclk3zHxa43mQStE+eP6YQ5YLjXcukv9OkXVOzO3zaT4gdlbU5/efWNef3fXliVDx9fV6jd/vxsf4DiqqVLnh7uGgHxfF9q6bU/luwuFxoMfJq0mv1ilcWtnTLq1+U8W9T9RpiSx/Zq9fZ5TiDppNZRlanHY9H0bCd4bSzJ4vRw3ckC3p2mfxEV1/Bxdc2NcM/fQ/CS/5knbq/D3jHM2mcQxXv8M9tLcvnk8+0246wr3QZMKFLERS0BL1HF1fef0RMha1IcdHCCcyYs6BfUmH0hMpLzzzQZ+rteBA46zJwQpficmux6AOdrM4DBPRwP1C+y+Nf7UUTrm9/sDjQp+eieR+9AQPmPsvBUKAUkakHoLT0JG0FKEkf0243VrxLS//B93HHfms+i93nv8oa4G2vAYeS9tgZyY+kpbb0jyvKZ0hgK2Q5tJTLoulfvlYoNU8VUM6DJ16c5NWs4U8L1PK+L13d2imCFZMyUDD1kFhGlMl7KOM6QDmWI1Sy03p3ZSnOiWQbdDIbgIgcBUXgB6rIPaSR34Gu8AMMUSRw3KL2I11zLPEczFESqBJ5PNEVZtcMu/D06nsjHW2VeFTusvsjN/U4ye/WI5lvRTvyPq4wx9ACITSicWYjLeBtaLUyYnDWgYrIaRfCqMjtvjDvm3IUZgNPVxySCEhFyMYjdArGTrN3C56p3+8NUaNZSXjJWEmwP8SZ9IMT+XLk1UCtGnutsXM52jQGVUAQNHyWhmNsiBboQlY9wxBG/kkdkELI0d4iZaiQi6ZpdTU54+tsV1nnIk7Q9lIuFFFFE10MMTGX6mjoduq1gqloNcebAm1OcwzDcb7svlSX7IKNzgcAAAAA') format('woff2'),
+    url('//at.alicdn.com/t/font_1251483_n6d5wm0u6a.woff?t=1601828722669') format('woff'),
+    url('//at.alicdn.com/t/font_1251483_n6d5wm0u6a.ttf?t=1601828722669') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */ url('//at.alicdn.com/t/font_1251483_n6d5wm0u6a.svg?t=1601828722669#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.screenshot-button:before {
+    content: "\e628";
+    font-family: "iconfont";
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.layout-trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.layout-trigger:hover {
+    color: #1890ff;
+}
+
+.logo {
+    height: 32px;
+    background-image: url("/logo168-32.png");
+    margin: 16px;
+}
+
+.user-avatar {
+    float: right;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.site-layout .site-layout-background {
+    background: #fff;
+}
+
+.login-form {
+    max-width: 300px;
+}
+
+.login-form-forgot {
+    float: right;
+}
+
+.ant-col-rtl .login-form-forgot {
+    float: left;
+}
+
+.login-form-button {
+    width: 100%;
+}
+
+.ant-spin-container {
+    min-height: 495px;
+}
